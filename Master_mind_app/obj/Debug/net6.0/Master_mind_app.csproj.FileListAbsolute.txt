@@ -1,0 +1,15 @@
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\bin\Debug\net6.0\Master_mind_app.exe
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\bin\Debug\net6.0\Master_mind_app.deps.json
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\bin\Debug\net6.0\Master_mind_app.runtimeconfig.json
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\bin\Debug\net6.0\Master_mind_app.dll
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\bin\Debug\net6.0\Master_mind_app.pdb
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.csproj.AssemblyReference.cache
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.AssemblyInfoInputs.cache
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.AssemblyInfo.cs
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.csproj.CoreCompileInputs.cache
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.dll
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\refint\Master_mind_app.dll
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.pdb
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\Master_mind_app.genruntimeconfig.cache
+C:\Users\anass\source\repos\Master_mind_app\Master_mind_app\obj\Debug\net6.0\ref\Master_mind_app.dll
