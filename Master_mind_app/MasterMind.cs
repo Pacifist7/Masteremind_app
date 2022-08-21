@@ -6,26 +6,44 @@ using System.Threading.Tasks;
 
 namespace Master_mind_app
 {
+
+ 
+
     public static class MasterMind
     {
 
-        public static void CheckNumber()
+        public static void RunGame()
         {
             var rnd = new Random();
             var hiddenNumber = $"{rnd.Next(1, 6)}{rnd.Next(1, 6)}{rnd.Next(1, 6)}{rnd.Next(1, 6)}";
             Console.WriteLine(hiddenNumber);
 
+            Console.WriteLine("Choose a number with 4 digits, where each digit is between 1 and 6");
+            Console.WriteLine("There are 6 colors supported: 1=Red, 2=Green, 3=Yellow, 4=Blue, 5=Black and 6=Orange");
+            Console.WriteLine("(+) is used if one of the chosen colors is in the right position as in the secret code");
+            Console.WriteLine("(-) is used if one of the chosen colors is present in the code, but its position is incorrect.");
+            
+            var isGuessed = false;
+
             for (int j = 0; j < 10; j++)
             {
-                Console.WriteLine("Choose a number with 4 digits, where each digit is between 1 and 6");
-                Console.WriteLine("There are 6 colors supported: 1=Red, 2=Green, 3=Yellow, 4=Blue, 5=Black and 6=Orange");
-                Console.WriteLine("(+) is used if one of the chosen colors is in the right position as in the secret code");
-                Console.WriteLine("(-) is used if one of the chosen colors is present in the code, but its position is incorrect.");
+
+                Console.WriteLine("attempt: " + (j + 1));
+
                 var guessNumber = Console.ReadLine();
-                //CheckNumber
-                
-                var resultMinus = "";
+                var isValid = CheckGuessNumber(guessNumber);
+
+                while (!isValid)
+                {
+                    Console.WriteLine("Your guess does not meet the requirements. Keep in mind that all the digits should be between 1 and 6.");
+                    Console.WriteLine("Try again: ");
+                    guessNumber = Console.ReadLine();
+                    isValid = CheckGuessNumber(guessNumber);
+                }
+
                 var resultPlus = "";
+                var resultMinus = "";
+
 
                 //control guessNumber
                 for (int i = 0; i < guessNumber.Length; i++)
@@ -37,43 +55,42 @@ namespace Master_mind_app
                         if (hiddenNumber[i] == digit)
                         {
                             resultPlus += "+";
-                            Console.WriteLine("+");
                         }
 
                         //not same position
                         else
                         {
                             resultMinus += "-";
-                            Console.WriteLine("-");
                         }
                     }
                 }
 
+                
+                Console.WriteLine(resultPlus + resultMinus);
+
+
                 if (resultPlus == "++++")
                 {
                     Console.WriteLine("Congratulations, you cracked the code!");
+                    isGuessed = true;
                     break;
                 }
             }
-            Console.WriteLine("Unfortunately you lost, try again another time.");
+
+            if (!isGuessed)
+                Console.WriteLine("Unfortunately you lost, try again another time.");
+
         }
 
 
-        private static void CheckGuessNumber(string guessNumber)
+        public static bool CheckGuessNumber(string guessNumber)
         {
             for (int i = 0; i < guessNumber.Length; i++)
             {
-                if (guessNumber[i] == '1' || guessNumber[i] == '2' || guessNumber[i] == '3' || guessNumber[i] == '4' || guessNumber[i] == '5' || guessNumber[i] == '6')
-                {
-                    Console.WriteLine("All right then.");
-                    continue;
-                }
-                else
-                {
-                    Console.WriteLine("Your guess does not match the requirements");
-                    break;
-                }
+                if (guessNumber[i] != '1' && guessNumber[i] != '2' && guessNumber[i] != '3' && guessNumber[i] != '4' && guessNumber[i] != '5' && guessNumber[i] != '6')
+                    return false;
             }
+            return true;
         }
 
 

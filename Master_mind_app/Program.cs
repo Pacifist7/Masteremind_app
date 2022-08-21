@@ -1,8 +1,7 @@
 ﻿using Master_mind_app;
 
-MasterMind.CheckNumber();
+MasterMind.RunGame();
 
-//MasterMind.CheckGuessNumber(string guessNumber);
 
 
 
